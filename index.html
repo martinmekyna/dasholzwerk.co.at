@@ -18,6 +18,12 @@
       justify-content: center;
       align-items: center;
       background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      text-align: center;
     }
 
     img {
@@ -25,10 +31,49 @@
       max-width: 800px;
       height: auto;
     }
+
+    .contact {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact a {
+      color: #666666;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      .contact {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <img src="logo.png" alt="Das Holz Werk">
+  <main class="container">
+    <img src="logo.png" alt="Das Holz Werk">
+
+    <div class="contact">
+      <a href="tel:+4369917711083">
+        +43 699 17711083
+      </a>
+
+      <a href="mailto:martin@dasholzwerk.co.at">
+        martin@dasholzwerk.co.at
+      </a>
+    </div>
+  </main>
 </body>
 </html>
