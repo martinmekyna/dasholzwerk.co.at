@@ -62,18 +62,20 @@
       display: flex;
       width: 100%;
       max-width: 1200px;
-      height: 230px;
       margin-top: 45px;
       overflow: hidden;
     }
-
+    
     .gallery img {
-      flex: 1 1 0;
-      width: 0;
-      min-width: 0;
-      height: 100%;
-      object-fit: cover;
+      width: 20%;
+      height: auto;
       display: block;
+    }
+    
+    @media (max-width: 600px) {
+      .gallery {
+        margin-top: 30px;
+      }
     }
 
     /* Impressum */
@@ -105,7 +107,6 @@
       }
 
       .gallery {
-        height: 120px;
         margin-top: 30px;
       }
     }
