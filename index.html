@@ -56,6 +56,28 @@
       color: #000000;
     }
 
+    /* Fotobanner */
+
+    .gallery {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      height: 230px;
+      margin-top: 45px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      flex: 1 1 0;
+      width: 0;
+      min-width: 0;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Impressum */
+
     .impressum {
       position: fixed;
       bottom: 20px;
@@ -74,10 +96,17 @@
       color: #000000;
     }
 
+    /* Smartphone */
+
     @media (max-width: 600px) {
       .contact {
         flex-direction: column;
         gap: 12px;
+      }
+
+      .gallery {
+        height: 120px;
+        margin-top: 30px;
       }
     }
   </style>
@@ -85,12 +114,15 @@
 
 <body>
   <main class="container">
+
+    <!-- Logo -->
     <img
       class="logo"
       src="logo.png"
       alt="Das Holz Werk"
     >
 
+    <!-- Kontakt -->
     <div class="contact">
       <a href="tel:+4369917711083">
         +43 699 17711083
@@ -100,10 +132,21 @@
         martin@dasholzwerk.co.at
       </a>
     </div>
+
+    <!-- Fotobanner -->
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Das Holz Werk – Möbel 1">
+      <img src="foto2.jpg" alt="Das Holz Werk – Möbel 2">
+      <img src="foto3.jpg" alt="Das Holz Werk – Möbel 3">
+      <img src="foto4.jpg" alt="Das Holz Werk – Möbel 4">
+    </div>
+
   </main>
 
+  <!-- Impressum -->
   <footer class="impressum">
     <a href="/impressum.html">Impressum</a>
   </footer>
+
 </body>
 </html>
