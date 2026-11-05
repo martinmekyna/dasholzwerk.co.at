@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Das Holz Werk</title>
-
   <link rel="icon" href="/favicon.ico" sizes="any">
 
   <style>
@@ -16,19 +15,22 @@
       min-height: 100dvh;
       background: #ffffff;
       font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
     }
 
     .container {
-      min-height: 100vh;
-      min-height: 100dvh;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       box-sizing: border-box;
-      padding: 30px 15px 70px;
+      padding: 30px 15px;
     }
+
+    /* Logo */
 
     .logo {
       width: 85%;
@@ -37,8 +39,27 @@
       display: block;
     }
 
+    /* Fotobanner mit 5 Bildern */
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 45px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: calc((100% - 80px) / 5);
+      height: auto;
+      display: block;
+    }
+
+    /* Kontakt unter den Bildern */
+
     .contact {
-      margin-top: 10px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       gap: 30px;
@@ -56,32 +77,13 @@
       color: #000000;
     }
 
-    /* Fotobanner mit 5 Bildern */
-
-    .gallery {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 45px;
-    overflow: hidden;
-  }
-
-  .gallery img {
-    width: calc((100% - 40px) / 5);
-    height: auto;
-    display: block;
-  }
-    }
-
     /* Impressum */
 
     .impressum {
-      position: fixed;
-      bottom: 20px;
-      left: 0;
       width: 100%;
       text-align: center;
+      padding: 15px 0 20px;
+      box-sizing: border-box;
     }
 
     .impressum a {
@@ -97,19 +99,30 @@
     /* Smartphone */
 
     @media (max-width: 600px) {
-      .contact {
-        flex-direction: column;
-        gap: 12px;
+      .logo {
+        width: 100%;
       }
 
       .gallery {
+        gap: 8px;
         margin-top: 30px;
+      }
+
+      .gallery img {
+        width: calc((100% - 32px) / 5);
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 25px;
       }
     }
   </style>
 </head>
 
 <body>
+
   <main class="container">
 
     <!-- Logo -->
@@ -118,6 +131,15 @@
       src="logo.png"
       alt="Das Holz Werk"
     >
+
+    <!-- Fotobanner -->
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Das Holz Werk – Foto 1">
+      <img src="foto2.jpg" alt="Das Holz Werk – Foto 2">
+      <img src="foto3.jpg" alt="Das Holz Werk – Foto 3">
+      <img src="foto4.jpg" alt="Das Holz Werk – Foto 4">
+      <img src="foto5.jpg" alt="Das Holz Werk – Foto 5">
+    </div>
 
     <!-- Kontakt -->
     <div class="contact">
@@ -130,20 +152,12 @@
       </a>
     </div>
 
-    <!-- Fotobanner -->
-    <div class="gallery">
-      <img src="foto1.jpg" alt="Das Holz Werk – Foto 1">
-      <img src="foto2.jpg" alt="Das Holz Werk – Foto 2">
-      <img src="foto3.jpg" alt="Das Holz Werk – Foto 3">
-      <img src="foto4.jpg" alt="Das Holz Werk – Foto 4">
-      <img src="foto5.jpg" alt="Das Holz Werk – Foto 5">
-    </div>
-
   </main>
 
   <!-- Impressum -->
   <footer class="impressum">
     <a href="/impressum.html">Impressum</a>
   </footer>
+
 </body>
 </html>
