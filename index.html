@@ -59,18 +59,19 @@
     /* Fotobanner mit 5 Bildern */
 
     .gallery {
-      display: flex;
-      width: 100%;
-      max-width: 1200px;
-      margin-top: 45px;
-      overflow: hidden;
-      clip-path: inset(5px 0 0 0);
-    }
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 45px;
+    overflow: hidden;
+  }
 
-    .gallery img {
-      width: 20%;
-      height: auto;
-      display: block;
+  .gallery img {
+    width: calc((100% - 40px) / 5);
+    height: auto;
+    display: block;
+  }
     }
 
     /* Impressum */
