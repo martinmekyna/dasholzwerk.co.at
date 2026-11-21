@@ -3,8 +3,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Impressum | Das Holz Werk</title>
   <link rel="icon" href="/favicon.ico">
@@ -24,7 +23,7 @@
       margin: 0 auto;
     }
 
-    /* Foto links, Text rechts */
+    /* Layout: Foto links, Text rechts */
 
     .content {
       display: flex;
@@ -33,8 +32,8 @@
     }
 
     .photo {
-      width: 45%;
-      max-width: 450px;
+      width: 40%;
+      max-width: 420px;
       height: auto;
       display: block;
     }
@@ -47,16 +46,49 @@
     h1 {
       font-size: 24px;
       font-weight: 400;
-      margin-top: 0;
-      margin-bottom: 35px;
+      margin: 0 0 35px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 35px 0 12px;
     }
 
     p {
-      margin-bottom: 22px;
+      margin: 0 0 22px;
     }
 
     a {
       color: #555555;
+    }
+
+    /* Gewerbeberechtigungen */
+
+    .trade {
+      border-bottom: 1px solid #eeeeee;
+      padding: 12px 0;
+    }
+
+    .trade summary {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .trade-details {
+      padding: 15px 0 5px;
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .trade-details p {
+      margin-bottom: 12px;
+    }
+
+    .trade-details .wording {
+      line-height: 1.7;
     }
 
     .back {
@@ -64,6 +96,10 @@
       margin-top: 35px;
       font-size: 14px;
       text-decoration: none;
+    }
+
+    .back:hover {
+      color: #000000;
     }
 
     /* Smartphone */
@@ -93,24 +129,26 @@
 
 <body>
   <main>
-
     <div class="content">
 
       <!-- Foto links -->
+
       <img
         class="photo"
-        src="foto6.jpg"
+        src="foto7(2).jpg"
         alt="Martin Mekyna – Das Holz Werk"
       >
 
       <!-- Impressum rechts -->
+
       <div class="text-content">
 
         <h1>Impressum</h1>
 
         <p>
           <strong>Medieninhaber und verantwortlich für den Inhalt</strong><br>
-          Martin Mekyna<br>
+          Ing. Martin Mekyna, MSc<br>
+          Einzelunternehmen (EPU)<br>
           Prof. Otto Zeiller Strasse 10<br>
           2000 Stockerau<br>
           Österreich
@@ -128,13 +166,93 @@
           </a>
         </p>
 
+        <h2>Unternehmensangaben</h2>
+
         <p>
-          <strong>Über diese Website</strong><br>
-          Das Holz Werk ist ein privates
-          Holzwerkstatt- und Gestaltungsprojekt
-          im Aufbau. Diese Website dient
-          derzeit ausschließlich der
-          persönlichen Präsentation des Projekts.
+          <strong>UID-Nummer:</strong> ATU69935029<br>
+          <strong>Aufsichtsbehörde:</strong>
+          Bezirkshauptmannschaft Korneuburg<br>
+          <strong>Kammermitgliedschaft:</strong>
+          Wirtschaftskammer Niederösterreich
+        </p>
+
+        <h2>Gewerbeberechtigungen</h2>
+
+        <!-- Gewerbe 1 -->
+
+        <details class="trade">
+          <summary>
+            Erzeugung kunstgewerblicher Gegenstände
+          </summary>
+
+          <div class="trade-details">
+            <p>
+              <strong>GISA-Zahl:</strong> 40389929<br>
+              <strong>Gewerbeart:</strong> Freies Gewerbe
+            </p>
+
+            <p class="wording">
+              Erzeugung von kunstgewerblichen Zier- und
+              Schmuckgegenständen aus unedlen Metallen,
+              Draht, Gips, Beton, Holz, Horn, Kunststoff,
+              Leder, textilen Materialien, Stroh, Papier
+              und Glaselementen, Gemüse und Obst sowie
+              durch Fädeln von Edelsteinen, Silber-,
+              Glas-, Kunststoff- und Filzelementen und
+              das Bemalen und das Verzieren von Holz,
+              Keramik, Porzellan, Seide, Textilien,
+              Billets und Wachswaren
+            </p>
+          </div>
+        </details>
+
+        <!-- Gewerbe 2 -->
+
+        <details class="trade">
+          <summary>
+            Handelsgewerbe
+          </summary>
+
+          <div class="trade-details">
+            <p>
+              <strong>GISA-Zahl:</strong> 40389943<br>
+              <strong>Gewerbeart:</strong> Freies Gewerbe
+            </p>
+
+            <p class="wording">
+              Handelsgewerbe mit Ausnahme der
+              reglementierten Handelsgewerbe
+              und Handelsagent
+            </p>
+          </div>
+        </details>
+
+        <!-- Gewerbe 3 -->
+
+        <details class="trade">
+          <summary>
+            Zusammenbau von Möbelbausätzen
+          </summary>
+
+          <div class="trade-details">
+            <p>
+              <strong>GISA-Zahl:</strong> 40389936<br>
+              <strong>Gewerbeart:</strong> Freies Gewerbe
+            </p>
+
+            <p class="wording">
+              Zusammenbau von Möbelbausätzen
+            </p>
+          </div>
+        </details>
+
+        <h2>Über diese Website</h2>
+
+        <p>
+          Das Holz Werk ist ein Holzwerkstatt- und
+          Gestaltungsprojekt von Ing. Martin Mekyna, MSc.
+          Diese Website dient der Präsentation eigener
+          Holzarbeiten und Möbelprojekte.
         </p>
 
         <a class="back" href="/">
@@ -143,7 +261,6 @@
 
       </div>
     </div>
-
   </main>
 </body>
 </html>
